@@ -1,0 +1,51 @@
+<div class="header">
+    <div class="logo">
+        <img src="../../assets/logo.png" alt="">
+        <h1>Owlearn</h1>
+    </div>   
+    <i class="fa-solid fa-bars" (click)="openMenu()"></i>
+    <div class="links" >
+        <ul class="mob" [class.linksAfter]="toggle">
+            <li><a class="first" href="#">home</a></li>
+            <li><a href="#">Bootcamp</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Article</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#divOne" class="button">Contact Us</a></li>
+            
+        </ul>
+    </div>
+       
+</div>
+
+
+<!--  -->
+<div class="overlay" id="divOne">
+    <div class="wrapper">
+        <h2>Please Fill up The Form</h2><a class="close" href="#">&times;</a>
+        <div class="content">
+            <div class="container">
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+                    <div class="form-group" [class.error-form]="email?.invalid && email?.touched">
+                        <label for="email">Your email</label>
+                        <input type="email" id="email" placeholder="Please leave your email" 
+                            required  formControlName="email">
+                        <div class="text-danger" *ngIf="email?.touched && email?.invalid && email?.errors">
+                            <small *ngIf="email?.errors?.['required']">Your email is required</small>
+                        </div>
+                    </div>
+                    <div class="form-group" [class.error-form]="area?.invalid && area?.touched">
+                        <label for="textar"> Message *</label>
+                        <textarea formControlName="area" placeholder="Write Your Message" 
+                            cols="40" required rows="10" id="textar" class="form-control"></textarea>
+                        <div *ngIf="area?.errors && area?.invalid && area?.touched" class="text-danger">
+                            <small *ngIf="area?.errors?.['required']">Your Message is required If You Want To Send
+                                Message</small>
+                        </div>
+                    </div>
+                    <button [disabled]="loginForm.invalid">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

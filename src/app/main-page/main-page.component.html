@@ -1,0 +1,180 @@
+<div class="firstSection">
+    <div class="title">
+        <p class="firstPAragraph">Learn Any Skills <br> to advance your <br> career path</p>
+        <img src="../../assets/Vector 1.png" alt="">
+        <p class="secondParagraph">Want to improve your work skills? You need to study <br> harder with the help of a
+            great mentor to improve <br> your performance at work</p>
+        <div class="footerOfFirstSection">
+            <button>Explore Path</button>
+            <div class="pictures">
+                <img src="../../assets/Picture.png" alt="">
+                <div class="star-with-paragraph">
+                    <div class="stars">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                    </div>
+                    <div class="prag">
+                        <p>(4,5/5 dari 10k Alumni)</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="image">
+        <img src="../../assets/Learning - Video Course 1.png" alt="">
+    </div>
+</div>
+
+<!-- ------------------------------------------------------------- -->
+
+<div class="second-section">
+    <p>We partner with more <br> than 10+ companies</p>
+    <div class="logos">
+        <img src="../../assets/1.png" alt="">
+        <img src="../../assets/2.png" alt="">
+        <img src="../../assets/3.png" alt="">
+        <img src="../../assets/4.png" alt="">
+        <img src="../../assets/0.png" alt="">
+    </div>
+</div>
+
+
+<!-- ----------------------------------------------------- -->
+
+<div class="third-section">
+    <div class="img">
+        <img src="../../assets/online-course-of-study-2021-09-24-03-56-00-utc 1.png" alt="">
+        <div class="above-section">
+            <h2>Educational technology</h2>
+            <p> <i class="fa-solid fa-location-dot"></i>Jakarta, Indonesia</p>
+
+        </div>
+
+
+    </div>
+    <div class="title">
+        <h1>Owlearn helps you Become <br> Experienced</h1>
+        <p>Owlearn provides e-learning solutions for companies, <br> universities and individual professionals. It
+            allows users to <br> create courses, and provides an integrated learning <br> management system. Its
+            offerings include digital course <br> tools, study materials, IT infrastructure and other <br> operations.
+        </p>
+        <button>Become a Member</button>
+    </div>
+</div>
+
+
+<!-- ----------------------------------------------------- -->
+<div class="fifth-section">
+    <div class="header">
+        <h2>Discover Course & Bootcamp</h2>
+        <button>Show ALL</button>
+    </div>
+
+    <div class="filteredBtns">
+        <button [class.active-btn]="selectedKey == 'ALL'" (click)="selectedKey = 'ALL'">All Program</button>
+        <button [class.active-btn]="selectedKey == 'Product Management'"
+            (click)="selectedKey = 'Product Management'">Product Management</button>
+        <button [class.active-btn]="selectedKey == 'Web Development'" (click)="selectedKey = 'Web Development'">Web
+            Development</button>
+        <button [class.active-btn]="selectedKey == 'UI/UX Design'" (click)="selectedKey = 'UI/UX Design'">UI/UX
+            Design</button>
+        <button [class.active-btn]="selectedKey == 'Branding Design'" (click)="selectedKey = 'Branding Design'">Branding
+            Design</button>
+    </div>
+    <!-- ------------------------------------------ -->
+    <div class="fourth-section">
+        <ng-container *ngFor="let course of courses">
+            <div class="card" *ngIf="course?.type == selectedKey || selectedKey == 'ALL'">
+                <img class="card-img-top" [src]="course.image">
+                <div class="card-body">
+                    <h6 class="card-title">{{course.history}}</h6>
+                    <h2>{{course.title}}</h2>
+                    <p class="card-text">{{course.content}} </p>
+                    <div class="footer">
+                        <span>
+                            <p>{{course.price | currency:'USD'}}</p> <del>$ 500</del>
+                        </span>
+                        <button>Show All</button>
+                    </div>
+                </div>
+                <div class="above">
+                    <i class="fa-solid fa-user"></i>
+                    <span style="color: #DC4298;">120</span>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<!-- ------------------------------------------- -->
+
+<div class="sixth-section">
+    <div class="title">
+        <h1>Still confused about your <br> career choice? consult with <br> our experts</h1>
+        <button>Contact Us</button>
+    </div>
+    <div class="image">
+        <div class="circle"></div>
+        <img src="../../assets/b.png" alt="">
+    </div>
+</div>
+<!-- ------------------------------------------ -->
+
+<div class="seven-section">
+    <h2 class="title">Our graduates have worked in</h2>
+    <div class="alImages">
+        <img src="../../assets/dropbox.png" alt="">
+        <img src="../../assets/Elastic.png" alt="">
+        <img src="../../assets/FreshBooks.png" alt="">
+        <img src="../../assets/GitHub.png" alt="">
+        <img src="../../assets/Google Workspace.png" alt="">
+        <img src="../../assets/Clicup.png" alt="">
+        <img src="../../assets/helpscout.png" alt="">
+        <img src="../../assets/Paychex.png" alt="">
+        <img src="../../assets/Salesforce.png" alt="">
+        <img src="../../assets/SAP.png" alt="">
+        <img src="../../assets/Segment.png" alt="">
+        <img src="../../assets/ServiceNow.png" alt="">
+        <img src="../../assets/shopify.png" alt="">
+        <img src="../../assets/intuit.png" alt="">
+        <img src="../../assets/HubSpot.png" alt="">
+
+    </div>
+</div>
+
+
+<!-- ------------------------------------------------ -->
+
+<div class="lastOne">
+    <div class="img">
+        <img src="../../assets/last.png" alt="">
+    </div>
+    <div class="theFooter">
+
+        <div class="title">
+            <h2>What did they say</h2>
+            <p>Higher education in the era of the industrial revolution 4.0 <br>
+                requires breakthrough learning using digital platforms that <br>
+                answer the challenges of millennial students to study <br>
+                anywhere, anytime and with leading-edge ICT technology. <br>
+                From student recruitment to teaching and learning <br>
+                administration processes,</p>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <div class="first">
+                <h3>Briana Patton</h3>
+                <p>Designer at Salesforce</p>
+            </div>
+            <div class="second">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+
+</div>
